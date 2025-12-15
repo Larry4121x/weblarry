@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'conexion_ventas.php';
 
 // Definir la consulta SQL

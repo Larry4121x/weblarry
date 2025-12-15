@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'conexion_ventas.php';
 
 // Validar que los datos
@@ -36,7 +37,7 @@ if (!$stmt) {
 $stmt->bind_param('ssssi', $nombre, $telefono, $direccion, $pedido, $id);
 if ($stmt->execute()) {
     
-    header('Location: http://localhost/weblarry/weblarry/registro_pedidos.php?mensaje=actualizado');
+    header('Location: http://localhost/weblarry/registro_pedidos.php?mensaje=actualizado');
     exit(); 
 } else {
     // Error en la ejecución

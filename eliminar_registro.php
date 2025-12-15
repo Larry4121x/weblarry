@@ -1,4 +1,5 @@
 <?php
+session_start();
 include 'conexion_ventas.php';
 
 // Validar id 
@@ -14,7 +15,7 @@ if (!$stmt) {
 }
 $stmt->bind_param('i', $id);
 if ($stmt->execute()) {
-    header('Location: http://localhost/weblarry/weblarry/registro.php?mensaje=eliminado');
+    header('Location:http://localhost/weblarry/registro_pedidos.php?mensaje=eliminado');
     exit(); 
 } else {
     echo "Error al eliminar el registro: " . htmlspecialchars($stmt->error);
